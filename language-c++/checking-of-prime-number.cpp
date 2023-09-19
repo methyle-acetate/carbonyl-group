@@ -10,18 +10,16 @@ int main() {
     // Check for prime
     bool isPrime = num > 1;  // Assume it's prime if num > 1
 
-
-         if (num % 2 == 0) {
+     for (int i = 2; i * i <= num; i++) {
+         if (num % i == 0) {
              isPrime = false;
-
+             break;
          }
-
+     }
 
     if (isPrime) {
         cout << num << " is a prime number." << endl;
-    } else if(num ==2){
-    	 cout << num << " is a prime number." << endl;
-	}else {
+    } else {
         cout << num << " is not a prime number." << endl;
     }
 
